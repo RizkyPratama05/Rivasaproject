@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
   </head>
   <body>
     
@@ -65,9 +65,12 @@
     <main>
       
       <!-- Hero Section -->
-      <section id="home" class="section hero-section">
-        <div class="container hero-container">
-          <div class="hero-content">
+      <section id="home" class="section hero-section" style="position: relative; overflow: hidden;">
+        <!-- Canvas for particle background -->
+        <canvas id="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.25;"></canvas>
+        
+        <div class="container hero-container" style="position: relative; z-index: 2;">
+          <div class="hero-content scroll-reveal">
             <div class="badge-glow">
               <span class="badge-dot"></span>
               <span>Based in Indonesia</span>
@@ -115,7 +118,7 @@
   mission: <span class="token string">"Build high-performance tech"</span>,
   readyForNewProjects: <span class="token boolean">true</span>
 };
-
+ 
 <span class="token keyword">export default</span> <span class="token variable">rivasaProject</span>;</code></pre>
               </div>
             </div>
@@ -280,7 +283,7 @@
             <!-- Service 4 -->
             <div class="service-card">
               <div class="service-icon-box">
-                <i data-lucide="paint-brush"></i>
+                <i data-lucide="palette"></i>
               </div>
               <h4 class="service-title">UI/UX & Branding</h4>
               <p class="service-desc">
@@ -441,6 +444,132 @@
         </div>
       </section>
 
+      <!-- Our Process Section -->
+      <section class="section process-section scroll-reveal">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-subtitle text-gradient">Our Method</h2>
+            <h3 class="section-title">Bagaimana Kami Membantu Anda</h3>
+            <p class="section-desc mx-auto">
+              Proses kerja yang transparan, terstruktur, dan berorientasi pada detail untuk memastikan gagasan luar biasa Anda terealisasi menjadi produk digital kelas dunia.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <!-- Step 1 -->
+            <div class="process-card scroll-reveal">
+              <div class="process-step-num">1</div>
+              <h4 class="process-card-title">Discovery & Strategy</h4>
+              <p class="process-card-desc">
+                Kami mendengarkan ide Anda, meriset kompetitor, menentukan arsitektur teknis, dan merancang timeline proyek yang presisi.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-card scroll-reveal" style="transition-delay: 0.1s;">
+              <div class="process-step-num">2</div>
+              <h4 class="process-card-title">Premium UI/UX Design</h4>
+              <p class="process-card-desc">
+                Merancang prototipe interaktif visual high-fidelity yang modern, ramah seluler, dan menakjubkan bagi target pengguna Anda.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-card scroll-reveal" style="transition-delay: 0.2s;">
+              <div class="process-step-num">3</div>
+              <h4 class="process-card-title">Clean Development</h4>
+              <p class="process-card-desc">
+                Mulai membangun kode bersih yang skalabel, dioptimalkan untuk SEO, responsif, dan berkecepatan tinggi oleh developer ahli.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-card scroll-reveal" style="transition-delay: 0.3s;">
+              <div class="process-step-num">4</div>
+              <h4 class="process-card-title">Launch & Support</h4>
+              <p class="process-card-desc">
+                Melakukan deployment di server cloud premium, testing performa menyeluruh, serta pemeliharaan berkala pasca rilis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section faq-section scroll-reveal" id="faq">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-subtitle text-gradient">Common Questions</h2>
+            <h3 class="section-title">Tanya Jawab Seputar Layanan</h3>
+            <p class="section-desc mx-auto">
+              Temukan jawaban atas pertanyaan umum terkait kolaborasi, skema pengerjaan, dan dukungan teknis yang kami sediakan untuk proyek Anda.
+            </p>
+          </div>
+
+          <div class="faq-container">
+            <!-- FAQ 1 -->
+            <div class="faq-item scroll-reveal">
+              <div class="faq-header">
+                <span class="faq-question">Berapa lama proses pembuatan sebuah proyek digital?</span>
+                <div class="faq-icon-box">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Durasi proyek sangat bervariasi bergantung pada skala dan kompleksitas fitur. Untuk Landing Page sederhana biasanya selesai dalam 1-2 minggu, website Company Profile membutuhkan waktu sekitar 2-4 minggu, sedangkan aplikasi mobile custom atau sistem SaaS yang kompleks dapat memakan waktu 1-3 bulan. Kami selalu memberikan estimasi timeline yang terperinci sebelum proyek dimulai.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item scroll-reveal" style="transition-delay: 0.1s;">
+              <div class="faq-header">
+                <span class="faq-question">Apakah saya akan mendapatkan update progres secara berkala?</span>
+                <div class="faq-icon-box">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Tentu saja! Komunikasi transparan adalah nilai utama kami. Kami menyediakan link staging privat agar Anda bisa melihat perkembangan website secara real-time. Selain itu, kami memberikan update resmi per tahapan pengerjaan (Desain, Frontend, Integration) via WhatsApp atau email untuk memastikan hasil akhir 100% sesuai dengan ekspektasi Anda.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item scroll-reveal" style="transition-delay: 0.2s;">
+              <div class="faq-header">
+                <span class="faq-question">Bagaimana sistem pembayaran proyek di RIVASA?</span>
+                <div class="faq-icon-box">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Untuk menjaga komitmen dan keamanan bersama, kami umumnya menggunakan sistem pembayaran termin bertahap. Sistem standar kami adalah pembayaran Down Payment (DP) sebesar 30-50% di awal sebelum riset & desain dimulai, kemudian termin berikutnya sesuai kesepakatan milestone progres pengerjaan, dan pelunasan akhir setelah proyek selesai ditinjau dan siap dideploy ke server publik Anda.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item scroll-reveal" style="transition-delay: 0.3s;">
+              <div class="faq-header">
+                <span class="faq-question">Apakah ada garansi & pemeliharaan (maintenance) setelah rilis?</span>
+                <div class="faq-icon-box">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-body">
+                <div class="faq-content">
+                  Ya! Kami berkomitmen penuh atas kualitas produk yang kami rilis. Setiap proyek kami lengkapi dengan Garansi Bebas Bug (Free Bug Fix) selama 1 hingga 3 bulan setelah peluncuran. Kami juga menyediakan paket pemeliharaan (maintenance) opsional jangka panjang yang mencakup monitoring server, update berkala keamanan sistem, backup data otomatis, serta optimasi kecepatan performa berkala.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact Section -->
       <section id="contact" class="section contact-section">
         <div class="container contact-container">
@@ -492,57 +621,147 @@
             </div>
           </div>
 
-          <div class="contact-form-panel">
-            <div class="form-bg-glow"></div>
-            <form id="contact-form" class="contact-form">
-              <h4 class="form-title">Hubungi Kami</h4>
-              <p class="form-subtitle">Lengkapi detail proyek Anda di bawah ini.</p>
-              
-              <div class="input-group">
-                <input type="text" id="form-name" required placeholder=" " />
-                <label for="form-name">Nama Lengkap</label>
-                <span class="input-border"></span>
+          <div class="contact-interactive-column" style="display: flex; flex-direction: column; gap: 30px; width: 100%;">
+            <!-- Cost Calculator Panel -->
+            <div class="calculator-panel scroll-reveal">
+              <div class="calc-title-box">
+                <h4 class="calc-title">Estimasi Biaya Proyek</h4>
+                <p class="calc-subtitle">Pilih opsi kebutuhan Anda untuk melihat kisaran harga</p>
               </div>
 
-              <div class="input-group">
-                <input type="email" id="form-email" required placeholder=" " />
-                <label for="form-email">Alamat Email</label>
-                <span class="input-border"></span>
-              </div>
-
-              <div class="input-group">
-                <select id="form-service" required>
-                  <option value="" disabled selected hidden></option>
-                  <option value="web">Web Development</option>
-                  <option value="mobile">Mobile App Development</option>
-                  <option value="saas">Custom Software & SaaS</option>
-                  <option value="other">Lainnya / Kolaborasi</option>
-                </select>
-                <label for="form-service" class="select-label">Kategori Layanan</label>
-                <span class="input-border"></span>
-              </div>
-
-              <div class="input-group">
-                <textarea id="form-message" required rows="4" placeholder=" "></textarea>
-                <label for="form-message">Deskripsikan ide proyek Anda...</label>
-                <span class="input-border"></span>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
-                <span>Kirim Pesan</span>
-                <i data-lucide="send" id="submit-icon"></i>
-              </button>
-            </form>
-            
-            <!-- Success Overlay inside Card -->
-            <div class="success-overlay" id="success-overlay">
-              <div class="success-content">
-                <div class="success-icon-box">
-                  <i data-lucide="check-circle-2"></i>
+              <!-- Group 1: Service Type -->
+              <div class="calc-group">
+                <span class="calc-group-title">Jenis Layanan</span>
+                <div class="calc-options-grid" id="calc-service-type">
+                  <div class="calc-option-btn active" data-value="web" data-cost="5000000">
+                    <span class="opt-title">Website</span>
+                    <span class="opt-desc">Company Profile / Landing Page</span>
+                  </div>
+                  <div class="calc-option-btn" data-value="mobile" data-cost="15000000">
+                    <span class="opt-title">Mobile App</span>
+                    <span class="opt-desc">Android / iOS App</span>
+                  </div>
+                  <div class="calc-option-btn" data-value="saas" data-cost="20000000">
+                    <span class="opt-title">Custom SaaS</span>
+                    <span class="opt-desc">Sistem Kustom Kompleks</span>
+                  </div>
                 </div>
-                <h4>Pesan Terkirim!</h4>
-                <p>Terima kasih telah menghubungi RIVASA Project. Tim kami (Rizky / Revano) akan segera menghubungi Anda kembali dalam waktu maksimal 24 jam.</p>
-                <button type="button" class="btn btn-outline" id="success-close-btn">Kembali</button>
+              </div>
+
+              <!-- Group 2: Project Scope / Scale -->
+              <div class="calc-group">
+                <span class="calc-group-title">Skala & Kompleksitas</span>
+                <div class="calc-options-grid" id="calc-scope">
+                  <div class="calc-option-btn active" data-value="simple" data-multiplier="1.0">
+                    <span class="opt-title">Standar</span>
+                    <span class="opt-desc">Fitur dasar, performa tinggi</span>
+                  </div>
+                  <div class="calc-option-btn" data-value="medium" data-multiplier="1.5">
+                    <span class="opt-title">Kustom</span>
+                    <span class="opt-desc">Integrasi multi-page & CMS</span>
+                  </div>
+                  <div class="calc-option-btn" data-value="enterprise" data-multiplier="2.2">
+                    <span class="opt-title">Enterprise</span>
+                    <span class="opt-desc">Skala besar & multi-role</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Group 3: Additional Features -->
+              <div class="calc-group">
+                <span class="calc-group-title">Fitur Tambahan (Opsional)</span>
+                <div class="calc-checkbox-list">
+                  <div class="calc-checkbox-item" data-cost="1500000">
+                    <div class="checkbox-left">
+                      <span class="chk-title">User Authentication & Roles</span>
+                      <span class="chk-desc">Sistem login, registrasi, & hak akses</span>
+                    </div>
+                    <div class="checkbox-custom"></div>
+                  </div>
+                  <div class="calc-checkbox-item" data-cost="2500000">
+                    <div class="checkbox-left">
+                      <span class="chk-title">Payment Gateway Integration</span>
+                      <span class="chk-desc">Midtrans / Xendit (e-wallet, bank transfer)</span>
+                    </div>
+                    <div class="checkbox-custom"></div>
+                  </div>
+                  <div class="calc-checkbox-item" data-cost="1000000">
+                    <div class="checkbox-left">
+                      <span class="chk-title">Advanced SEO & Analytics</span>
+                      <span class="chk-desc">Optimasi maksimal di Google & dashboard analitik</span>
+                    </div>
+                    <div class="checkbox-custom"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dynamic Calculated Result Box -->
+              <div class="calc-result-box">
+                <span class="result-label">Estimasi Kisaran Biaya</span>
+                <div class="result-price-range" id="calc-price-display">Rp 5.000.000 - Rp 7.000.000</div>
+                <p class="result-desc">
+                  *Ini merupakan estimasi awal berdasarkan parameter yang Anda pilih. Dapatkan harga final setelah konsultasi detail.
+                </p>
+                <button type="button" class="btn btn-outline" id="calc-apply-btn" style="width: 100%; margin-top: 10px;">
+                  <span>Gunakan Estimasi Ini di Form</span>
+                  <i data-lucide="arrow-down"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Contact Form Card -->
+            <div class="contact-form-panel scroll-reveal">
+              <div class="form-bg-glow"></div>
+              <form id="contact-form" class="contact-form">
+                <h4 class="form-title">Hubungi Kami</h4>
+                <p class="form-subtitle">Lengkapi detail proyek Anda di bawah ini.</p>
+                
+                <div class="input-group">
+                  <input type="text" id="form-name" required placeholder=" " />
+                  <label for="form-name">Nama Lengkap</label>
+                  <span class="input-border"></span>
+                </div>
+
+                <div class="input-group">
+                  <input type="email" id="form-email" required placeholder=" " />
+                  <label for="form-email">Alamat Email</label>
+                  <span class="input-border"></span>
+                </div>
+
+                <div class="input-group">
+                  <select id="form-service" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="web">Web Development</option>
+                    <option value="mobile">Mobile App Development</option>
+                    <option value="saas">Custom Software & SaaS</option>
+                    <option value="other">Lainnya / Kolaborasi</option>
+                  </select>
+                  <label for="form-service" class="select-label">Kategori Layanan</label>
+                  <span class="input-border"></span>
+                </div>
+
+                <div class="input-group">
+                  <textarea id="form-message" required rows="4" placeholder=" "></textarea>
+                  <label for="form-message">Deskripsikan ide proyek Anda...</label>
+                  <span class="input-border"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                  <span>Kirim Pesan</span>
+                  <i data-lucide="send" id="submit-icon"></i>
+                </button>
+              </form>
+              
+              <!-- Success Overlay inside Card -->
+              <div class="success-overlay" id="success-overlay">
+                <div class="success-content">
+                  <div class="success-icon-box">
+                    <i data-lucide="check-circle"></i>
+                  </div>
+                  <h4>Pesan Terkirim!</h4>
+                  <p>Terima kasih telah menghubungi RIVASA Project. Tim kami (Rizky / Revano) akan segera menghubungi Anda kembali dalam waktu maksimal 24 jam.</p>
+                  <button type="button" class="btn btn-outline" id="success-close-btn">Kembali</button>
+                </div>
               </div>
             </div>
           </div>
@@ -598,7 +817,62 @@
       </div>
     </footer>
 
+    <!-- Dual-Founder Floating WhatsApp Widget -->
+    <div class="wa-widget-container" id="wa-widget">
+      <!-- Glassmorphic Contact Card Drawer -->
+      <div class="wa-card-drawer" id="wa-drawer">
+        <div class="wa-card-header">
+          <div class="wa-header-icon">
+            <i data-lucide="message-square"></i>
+          </div>
+          <div class="wa-header-text">
+            <h4>Hubungi RIVASA</h4>
+            <p>Konsultasi gratis dengan Co-Founder kami</p>
+          </div>
+        </div>
+        <div class="wa-card-body">
+          <!-- Rizky Pratama Putra -->
+          <a href="https://wa.me/6281393457688?text=Halo%20Rizky,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20proyek%20digital%20dengan%20RIVASA%20PROJECT." target="_blank" class="wa-founder-row founder-rizky">
+            <div class="wa-row-left">
+              <div class="wa-avatar-box">
+                <img src="rizky.jpg" alt="Rizky Pratama Putra">
+              </div>
+              <div class="wa-row-info">
+                <h5>Rizky Pratama P.</h5>
+                <p>Managing Director / Lead Dev</p>
+              </div>
+            </div>
+            <div class="wa-chat-icon">
+              <i data-lucide="message-square"></i>
+            </div>
+          </a>
+
+          <!-- Revano Athalla Kartika -->
+          <a href="https://wa.me/6288232850046?text=Halo%20Revano,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20desain%20dan%20proyek%20dengan%20RIVASA%20PROJECT." target="_blank" class="wa-founder-row founder-revano">
+            <div class="wa-row-left">
+              <div class="wa-avatar-box">
+                <img src="revano.jpg" alt="Revano Athalla Kartika">
+              </div>
+              <div class="wa-row-info">
+                <h5>Revano Athalla K.</h5>
+                <p>CTO / Creative Lead</p>
+              </div>
+            </div>
+            <div class="wa-chat-icon">
+              <i data-lucide="message-square"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Glowing Toggle Bubble Button -->
+      <button class="wa-toggle-btn" id="wa-toggle" aria-label="WhatsApp Chat Widget">
+        <i data-lucide="message-circle" id="wa-toggle-icon"></i>
+      </button>
+    </div>
+
     <!-- Main Module Script -->
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
+

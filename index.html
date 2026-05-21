@@ -20,7 +20,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons CDN -->
     <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -51,7 +51,7 @@
         </nav>
 
         <div class="nav-actions">
-          <a href="#contact" class="btn btn-outline nav-btn-desktop">Contact Us</a>
+          <a href="#contact" class="btn btn-outline nav-btn-desktop brutal-btn">Contact Us</a>
           <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -67,27 +67,27 @@
       <!-- Hero Section -->
       <section id="home" class="section hero-section" style="position: relative; overflow: hidden;">
         <!-- Canvas for particle background -->
-        <canvas id="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.25;"></canvas>
+        <canvas id="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.15;"></canvas>
         
         <div class="container hero-container" style="position: relative; z-index: 2;">
           <div class="hero-content scroll-reveal">
-            <div class="badge-glow">
+            <div class="badge-glow brutal-badge">
               <span class="badge-dot"></span>
               <span>Based in Indonesia</span>
             </div>
-            <h1 class="hero-title">
+            <h1 class="hero-title brutal-title">
               Digital Solutions for <br>
-              <span class="text-gradient">Modern Business</span>
+              <span class="text-gradient brutal-gradient">Modern Business</span>
             </h1>
-            <p class="hero-desc">
+            <p class="hero-desc brutal-desc">
               <strong>Tech. Code. Build.</strong> Kami merancang dan membangun ekosistem digital premium mulai dari website performa tinggi, aplikasi mobile tangguh, hingga sistem SaaS kustom untuk mengakselerasi pertumbuhan bisnis Anda.
             </p>
             <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary">
+              <a href="#contact" class="btn btn-primary brutal-btn">
                 <span>Start a Project</span>
                 <i data-lucide="arrow-right"></i>
               </a>
-              <a href="#services" class="btn btn-secondary">
+              <a href="#services" class="btn btn-secondary brutal-btn">
                 <span>Explore Services</span>
               </a>
             </div>
@@ -95,8 +95,8 @@
           
           <div class="hero-visual">
             <div class="hero-card-glow"></div>
-            <div class="interactive-card">
-              <div class="card-header">
+            <div class="brutal-window scroll-reveal" style="transition-delay: 0.1s;">
+              <div class="window-header">
                 <div class="window-dots">
                   <span class="dot red"></span>
                   <span class="dot yellow"></span>
@@ -104,7 +104,7 @@
                 </div>
                 <span class="window-title">rivasa-project.config.js</span>
               </div>
-              <div class="card-body code-editor">
+              <div class="window-body code-editor">
                 <pre><code><span class="token keyword">const</span> <span class="token variable">rivasaProject</span> <span class="token operator">=</span> {
   owners: [
     <span class="token string">"Rizky Pratama Putra"</span>,
@@ -123,7 +123,7 @@
               </div>
             </div>
             
-            <div class="floating-badge badge-1">
+            <div class="floating-badge badge-1 brutal-badge-float">
               <i data-lucide="cpu" class="badge-icon"></i>
               <div class="badge-text">
                 <span class="badge-title">High Perf</span>
@@ -131,7 +131,7 @@
               </div>
             </div>
             
-            <div class="floating-badge badge-2">
+            <div class="floating-badge badge-2 brutal-badge-float">
               <i data-lucide="code" class="badge-icon"></i>
               <div class="badge-text">
                 <span class="badge-title">Clean Code</span>
@@ -153,31 +153,28 @@
             </p>
           </div>
 
-          <div class="about-grid">
-            <!-- Founder 1 -->
-            <div class="founder-card">
-              <div class="founder-bg-glow"></div>
-              <div class="founder-card-inner">
-                <div class="founder-header">
-                  <div class="avatar-placeholder">
-                    <img src="rizky.jpg" alt="Rizky Pratama Putra">
-                  </div>
-                  <div>
-                    <h4 class="founder-name">Rizky Pratama Putra</h4>
-                    <span class="founder-role">Co-Founder & Managing Director</span>
-                  </div>
-                </div>
+          <div class="about-grid polaroid-deck">
+            <!-- Founder 1 (Rizky) -->
+            <div class="founder-card brutal-polaroid rizky-polaroid scroll-reveal">
+              <div class="polaroid-photo-wrapper">
+                <img src="rizky.jpg" alt="Rizky Pratama Putra" class="polaroid-img">
+                <div class="polaroid-tag polaroid-tag-blue">Rizky (Lead Dev)</div>
+              </div>
+              <div class="polaroid-content">
+                <h4 class="founder-name">Rizky Pratama Putra</h4>
+                <span class="founder-role role-blue">Co-Founder & Lead Web-Mobile Developer</span>
                 <p class="founder-desc">
-                  Memimpin arah strategis agensi serta arsitektur sistem backend. Rizky berfokus pada performa sistem, keamanan data, keandalan server, dan memastikan bahwa setiap baris kode dibangun dengan efisiensi tinggi serta siap untuk skala bisnis yang besar.
+                  Memimpin seluruh arsitektur teknis dan pengembangan sistem aplikasi web dan mobile di RIVASA. Rizky berfokus pada penulisan kode berkinerja tinggi menggunakan framework modern, integrasi API yang tangguh, serta memastikan website dan aplikasi seluler berjalan sangat cepat, responsif, dan siap mendukung pertumbuhan bisnis klien.
                 </p>
                 <div class="founder-skills">
-                  <span class="skill-tag">Backend Dev</span>
-                  <span class="skill-tag">System Architecture</span>
-                  <span class="skill-tag">DevOps</span>
-                  <span class="skill-tag">Project Strategy</span>
+                  <span class="skill-tag">Web Development</span>
+                  <span class="skill-tag">Mobile App Dev</span>
+                  <span class="skill-tag">Flutter & React Native</span>
+                  <span class="skill-tag">React / Next.js</span>
+                  <span class="skill-tag">API Integration</span>
                 </div>
                 <div class="founder-social">
-                  <a href="https://wa.me/6281393457688" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                  <a href="https://wa.me/6281393457688?text=Halo%20Rizky,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20proyek%20digital%20dengan%20RIVASA%20PROJECT." target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
                   <a href="https://www.instagram.com/rivasaproject/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
                   <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
                   <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
@@ -185,30 +182,26 @@
               </div>
             </div>
 
-            <!-- Founder 2 -->
-            <div class="founder-card">
-              <div class="founder-bg-glow"></div>
-              <div class="founder-card-inner">
-                <div class="founder-header">
-                  <div class="avatar-placeholder">
-                    <img src="revano.jpg" alt="Revano Athalla Kartika">
-                  </div>
-                  <div>
-                    <h4 class="founder-name">Revano Athalla Kartika</h4>
-                    <span class="founder-role">Co-Founder & CTO / Creative Lead</span>
-                  </div>
-                </div>
+            <!-- Founder 2 (Revano) -->
+            <div class="founder-card brutal-polaroid revano-polaroid scroll-reveal" style="transition-delay: 0.15s;">
+              <div class="polaroid-photo-wrapper">
+                <img src="revano.jpg" alt="Revano Athalla Kartika" class="polaroid-img">
+                <div class="polaroid-tag polaroid-tag-red">Revano (UI/UX)</div>
+              </div>
+              <div class="polaroid-content">
+                <h4 class="founder-name">Revano Athalla Kartika</h4>
+                <span class="founder-role role-red">Co-Founder & UI/UX / Creative Lead</span>
                 <p class="founder-desc">
-                  Mengawasi kualitas estetika desain interaktif serta implementasi frontend yang responsif. Revano memiliki hasrat mendalam untuk menciptakan antarmuka modern yang ramah pengguna (UI/UX) dan animasi mikro yang halus guna memberikan pengalaman terbaik.
+                  Mengawasi kualitas estetika, desain interaktif, dan identitas visual RIVASA. Revano berfokus pada riset pengguna, perancangan wireframe, serta pembuatan desain antarmuka (UI/UX) high-fidelity yang modern di Figma guna memastikan produk digital tidak hanya fungsional tetapi juga memberikan pengalaman visual yang luar biasa.
                 </p>
                 <div class="founder-skills">
                   <span class="skill-tag">UI/UX Design</span>
-                  <span class="skill-tag">Frontend Dev</span>
-                  <span class="skill-tag">React / Vue</span>
+                  <span class="skill-tag">Figma Prototyping</span>
+                  <span class="skill-tag">Branding & Identity</span>
                   <span class="skill-tag">Creative Direction</span>
                 </div>
                 <div class="founder-social">
-                  <a href="https://wa.me/6288232850046" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                  <a href="https://wa.me/6288232850046?text=Halo%20Revano,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20desain%20dan%20proyek%20dengan%20RIVASA%20PROJECT." target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
                   <a href="https://www.instagram.com/rivasaproject/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
                   <a href="#" aria-label="Figma"><i data-lucide="figma"></i></a>
                   <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
@@ -219,7 +212,7 @@
         </div>
       </section>
 
-      <!-- Services Section -->
+      <!-- Services Section (Bento Grid) -->
       <section id="services" class="section services-section">
         <div class="container">
           <div class="section-header text-center">
@@ -230,77 +223,109 @@
             </p>
           </div>
 
-          <div class="services-grid">
+          <div class="services-bento-grid">
             
-            <!-- Service 1 -->
-            <div class="service-card">
-              <div class="service-icon-box">
-                <i data-lucide="globe"></i>
+            <!-- Bento Card 1: Web Development (Double Column) -->
+            <div class="bento-card bento-web brutal-card scroll-reveal">
+              <div class="bento-inner">
+                <div class="service-icon-box bento-icon">
+                  <i data-lucide="globe"></i>
+                </div>
+                <h4 class="service-title">Web Development</h4>
+                <p class="service-desc">
+                  Website interaktif berkecepatan tinggi, dioptimalkan untuk SEO, ramah seluler, dan ramah pengguna menggunakan framework modern seperti Next.js, Vite, dan React.
+                </p>
+                <ul class="service-features bento-features-two-col">
+                  <li><i data-lucide="check" class="check-icon"></i> Landing Pages</li>
+                  <li><i data-lucide="check" class="check-icon"></i> Website Company Profile</li>
+                  <li><i data-lucide="check" class="check-icon"></i> Portal E-Commerce</li>
+                  <li><i data-lucide="check" class="check-icon"></i> Custom Web Systems</li>
+                </ul>
               </div>
-              <h4 class="service-title">Web Development</h4>
-              <p class="service-desc">
-                Website interaktif berkecepatan tinggi, dioptimalkan untuk SEO, ramah seluler, dan ramah pengguna menggunakan framework modern seperti Next.js, Vite, dan React.
-              </p>
-              <ul class="service-features">
-                <li><i data-lucide="check" class="check-icon"></i> Landing Pages</li>
-                <li><i data-lucide="check" class="check-icon"></i> Website Company Profile</li>
-                <li><i data-lucide="check" class="check-icon"></i> Portal E-Commerce</li>
-              </ul>
+              <div class="bento-visual web-visual-preview">
+                <div class="mock-browser">
+                  <div class="browser-header">
+                    <span class="b-dot"></span>
+                    <span class="b-dot"></span>
+                    <span class="b-dot"></span>
+                  </div>
+                  <div class="browser-body">
+                    <div class="mock-title"></div>
+                    <div class="mock-grid">
+                      <div class="mock-block"></div>
+                      <div class="mock-block"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Service 2 -->
-            <div class="service-card">
-              <div class="service-icon-box">
-                <i data-lucide="smartphone"></i>
+            <!-- Bento Card 2: Mobile App Dev (Tall Card, Row Span) -->
+            <div class="bento-card bento-mobile brutal-card scroll-reveal" style="transition-delay: 0.1s;">
+              <div class="bento-inner">
+                <div class="service-icon-box bento-icon">
+                  <i data-lucide="smartphone"></i>
+                </div>
+                <h4 class="service-title">Mobile App Development</h4>
+                <p class="service-desc">
+                  Aplikasi mobile lintas platform (iOS & Android) yang mulus dengan performa mumpuni dan integrasi backend tanpa kendala.
+                </p>
+                <ul class="service-features">
+                  <li><i data-lucide="check" class="check-icon"></i> Native-like Experience</li>
+                  <li><i data-lucide="check" class="check-icon"></i> Flutter & React Native</li>
+                  <li><i data-lucide="check" class="check-icon"></i> Push Notifications & APIs</li>
+                </ul>
               </div>
-              <h4 class="service-title">Mobile App Development</h4>
-              <p class="service-desc">
-                Aplikasi mobile lintas platform (iOS & Android) yang mulus dengan performa mumpuni dan integrasi backend tanpa kendala.
-              </p>
-              <ul class="service-features">
-                <li><i data-lucide="check" class="check-icon"></i> Native-like Experience</li>
-                <li><i data-lucide="check" class="check-icon"></i> Flutter & React Native</li>
-                <li><i data-lucide="check" class="check-icon"></i> Push Notifications & APIs</li>
-              </ul>
+              <div class="bento-visual mobile-visual-preview">
+                <div class="mock-phone">
+                  <div class="phone-camera"></div>
+                  <div class="phone-screen">
+                    <div class="phone-circle"></div>
+                    <div class="phone-bar"></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Service 3 -->
-            <div class="service-card">
-              <div class="service-icon-box">
-                <i data-lucide="layers"></i>
+            <!-- Bento Card 3: UI/UX & Branding -->
+            <div class="bento-card bento-uiux brutal-card scroll-reveal" style="transition-delay: 0.2s;">
+              <div class="bento-inner">
+                <div class="service-icon-box bento-icon">
+                  <i data-lucide="palette"></i>
+                </div>
+                <h4 class="service-title">UI/UX & Branding</h4>
+                <p class="service-desc">
+                  Riset pengguna mendalam dan prototipe interaktif yang memukau secara visual, fungsional, serta memperkuat identitas brand bisnis Anda.
+                </p>
+                <ul class="service-features">
+                  <li><i data-lucide="check" class="check-icon"></i> Riset & Wireframing</li>
+                  <li><i data-lucide="check" class="check-icon"></i> Desain Visual Figma</li>
+                </ul>
               </div>
-              <h4 class="service-title">Custom Software & SaaS</h4>
-              <p class="service-desc">
-                Sistem internal kustom untuk mengotomatiskan alur kerja Anda, sistem CRM/ERP terintegrasi, dan arsitektur SaaS yang sangat skalabel.
-              </p>
-              <ul class="service-features">
-                <li><i data-lucide="check" class="check-icon"></i> Dashboard Analytics</li>
-                <li><i data-lucide="check" class="check-icon"></i> Otomatisasi Proses Bisnis</li>
-                <li><i data-lucide="check" class="check-icon"></i> Skalabilitas Sistem Cloud</li>
-              </ul>
             </div>
 
-            <!-- Service 4 -->
-            <div class="service-card">
-              <div class="service-icon-box">
-                <i data-lucide="palette"></i>
+            <!-- Bento Card 4: Custom Software & SaaS -->
+            <div class="bento-card bento-saas brutal-card scroll-reveal" style="transition-delay: 0.3s;">
+              <div class="bento-inner">
+                <div class="service-icon-box bento-icon">
+                  <i data-lucide="layers"></i>
+                </div>
+                <h4 class="service-title">Custom Software & SaaS</h4>
+                <p class="service-desc">
+                  Sistem internal kustom untuk mengotomatiskan alur kerja Anda, sistem CRM/ERP terintegrasi, dan arsitektur SaaS yang sangat skalabel.
+                </p>
+                <ul class="service-features">
+                  <li><i data-lucide="check" class="check-icon"></i> Dashboard Analytics</li>
+                  <li><i data-lucide="check" class="check-icon"></i> Otomatisasi Sistem</li>
+                </ul>
               </div>
-              <h4 class="service-title">UI/UX & Branding</h4>
-              <p class="service-desc">
-                Riset pengguna mendalam dan prototipe interaktif yang memukau secara visual, fungsional, serta memperkuat identitas brand bisnis Anda.
-              </p>
-              <ul class="service-features">
-                <li><i data-lucide="check" class="check-icon"></i> Riset Pengguna & Wireframing</li>
-                <li><i data-lucide="check" class="check-icon"></i> Desain Visual High-Fidelity</li>
-                <li><i data-lucide="check" class="check-icon"></i> Panduan Identitas Brand</li>
-              </ul>
             </div>
 
           </div>
         </div>
       </section>
 
-      <!-- Portfolio Section -->
+      <!-- Portfolio Section (Alternating Showcases) -->
       <section id="portfolio" class="section portfolio-section">
         <div class="container">
           <div class="section-header text-center">
@@ -312,98 +337,110 @@
           </div>
 
           <!-- Filter Buttons -->
-          <div class="portfolio-filters">
+          <div class="portfolio-filters brutal-filters">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="web">Websites</button>
             <button class="filter-btn" data-filter="saas">SaaS & Systems</button>
             <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
           </div>
 
-          <!-- Portfolio Grid -->
-          <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Alternating Portfolio List -->
+          <div class="portfolio-showcase-list" id="portfolio-grid">
             
-            <!-- Project 1 -->
-            <div class="portfolio-item" data-category="saas">
-              <div class="portfolio-img-box">
-                <div class="portfolio-img-placeholder dark-gradient">
-                  <div class="project-art">
-                    <div class="art-card">
-                      <div class="art-header">
-                        <span class="art-dot"></span>
-                        <span class="art-dot"></span>
-                        <span class="art-dot"></span>
-                      </div>
-                      <div class="art-chart">
-                        <div class="chart-bar" style="height: 40%"></div>
-                        <div class="chart-bar" style="height: 70%"></div>
-                        <div class="chart-bar" style="height: 55%"></div>
-                        <div class="chart-bar" style="height: 85%"></div>
-                        <div class="chart-bar" style="height: 90%"></div>
-                      </div>
+            <!-- Project 1 (SaaS) -->
+            <div class="portfolio-showcase-item brutal-card scroll-reveal" data-category="saas">
+              <div class="project-showcase-visual project-violet-bg">
+                <div class="project-art-container">
+                  <div class="art-card brutal-art-card">
+                    <div class="art-header">
+                      <span class="art-dot"></span>
+                      <span class="art-dot"></span>
+                      <span class="art-dot"></span>
+                    </div>
+                    <div class="art-chart">
+                      <div class="chart-bar" style="height: 40%"></div>
+                      <div class="chart-bar" style="height: 70%"></div>
+                      <div class="chart-bar" style="height: 55%"></div>
+                      <div class="chart-bar" style="height: 85%"></div>
+                      <div class="chart-bar" style="height: 90%"></div>
                     </div>
                   </div>
                 </div>
-                <div class="portfolio-hover">
-                  <a href="#contact" class="portfolio-link-icon" aria-label="Lihat Proyek"><i data-lucide="external-link"></i></a>
-                </div>
               </div>
-              <div class="portfolio-info">
+              <div class="project-showcase-details">
                 <span class="project-category">SaaS & Systems</span>
                 <h4 class="project-title">Aura Analytics Dashboard</h4>
                 <p class="project-desc">Dashboard pemantauan analitik data real-time dengan sistem visualisasi grafik dinamis dan responsif.</p>
+                <div class="project-tags">
+                  <span class="tag-item">React</span>
+                  <span class="tag-item">D3.js</span>
+                  <span class="tag-item">Tailwind</span>
+                </div>
+                <a href="#contact" class="btn btn-outline brutal-btn" aria-label="Lihat Proyek">
+                  <span>Lihat Proyek</span>
+                  <i data-lucide="external-link"></i>
+                </a>
               </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="portfolio-item" data-category="web">
-              <div class="portfolio-img-box">
-                <div class="portfolio-img-placeholder light-gradient">
-                  <div class="project-art">
-                    <div class="art-browser">
-                      <div class="art-header">
-                        <span class="art-dot"></span>
-                        <span class="art-dot"></span>
-                      </div>
-                      <div class="art-hero-mock">
-                        <div class="mock-line-title"></div>
-                        <div class="mock-btn-glow"></div>
-                      </div>
+            <!-- Project 2 (Web - Reverse Layout) -->
+            <div class="portfolio-showcase-item item-reverse brutal-card scroll-reveal" data-category="web" style="transition-delay: 0.1s;">
+              <div class="project-showcase-visual project-coral-bg">
+                <div class="project-art-container">
+                  <div class="art-browser brutal-art-card">
+                    <div class="art-header">
+                      <span class="art-dot"></span>
+                      <span class="art-dot"></span>
+                    </div>
+                    <div class="art-hero-mock">
+                      <div class="mock-line-title"></div>
+                      <div class="mock-btn-glow"></div>
                     </div>
                   </div>
                 </div>
-                <div class="portfolio-hover">
-                  <a href="#contact" class="portfolio-link-icon" aria-label="Lihat Proyek"><i data-lucide="external-link"></i></a>
-                </div>
               </div>
-              <div class="portfolio-info">
+              <div class="project-showcase-details">
                 <span class="project-category">Websites</span>
                 <h4 class="project-title">Apex E-Commerce Platform</h4>
                 <p class="project-desc">Website e-commerce tangguh dengan proses checkout super cepat, terintegrasi payment gateway lokal.</p>
+                <div class="project-tags">
+                  <span class="tag-item">Next.js</span>
+                  <span class="tag-item">Tailwind</span>
+                  <span class="tag-item">Midtrans</span>
+                </div>
+                <a href="#contact" class="btn btn-outline brutal-btn" aria-label="Lihat Proyek">
+                  <span>Lihat Proyek</span>
+                  <i data-lucide="external-link"></i>
+                </a>
               </div>
             </div>
 
-            <!-- Project 3 -->
-            <div class="portfolio-item" data-category="mobile">
-              <div class="portfolio-img-box">
-                <div class="portfolio-img-placeholder mint-gradient">
-                  <div class="project-art">
-                    <div class="art-phone">
-                      <div class="art-screen">
-                        <div class="screen-circle"></div>
-                        <div class="screen-line"></div>
-                        <div class="screen-line short"></div>
-                      </div>
+            <!-- Project 3 (Mobile) -->
+            <div class="portfolio-showcase-item brutal-card scroll-reveal" data-category="mobile" style="transition-delay: 0.2s;">
+              <div class="project-showcase-visual project-teal-bg">
+                <div class="project-art-container">
+                  <div class="art-phone brutal-art-card">
+                    <div class="art-screen">
+                      <div class="screen-circle"></div>
+                      <div class="screen-line"></div>
+                      <div class="screen-line short"></div>
                     </div>
                   </div>
                 </div>
-                <div class="portfolio-hover">
-                  <a href="#contact" class="portfolio-link-icon" aria-label="Lihat Proyek"><i data-lucide="external-link"></i></a>
-                </div>
               </div>
-              <div class="portfolio-info">
+              <div class="project-showcase-details">
                 <span class="project-category">Mobile Apps</span>
                 <h4 class="project-title">Zenith Productivity Mobile App</h4>
                 <p class="project-desc">Aplikasi pelacak rutinitas harian & manajemen proyek minimalis yang dirilis di Google Play Store & App Store.</p>
+                <div class="project-tags">
+                  <span class="tag-item">Flutter</span>
+                  <span class="tag-item">NodeJS</span>
+                  <span class="tag-item">Firebase</span>
+                </div>
+                <a href="#contact" class="btn btn-outline brutal-btn" aria-label="Lihat Proyek">
+                  <span>Lihat Proyek</span>
+                  <i data-lucide="external-link"></i>
+                </a>
               </div>
             </div>
 
@@ -423,19 +460,19 @@
           </div>
 
           <div class="values-grid">
-            <div class="value-item">
+            <div class="value-item brutal-card">
               <div class="value-icon"><i data-lucide="zap"></i></div>
               <h4 class="value-title">Performa & Kecepatan Maksimal</h4>
               <p class="value-desc">Kami peduli dengan skor kecepatan loading website dan performa responsivitas aplikasi guna memberikan kenyamanan maksimal bagi pengguna akhir.</p>
             </div>
 
-            <div class="value-item">
+            <div class="value-item brutal-card">
               <div class="value-icon"><i data-lucide="shield-check"></i></div>
               <h4 class="value-title">Kode Bersih & Skalabel</h4>
               <p class="value-desc">Mengikuti standar best practice penulisan kode modern agar mudah dimodifikasi, aman, dan siap menyokong perluasan fitur bisnis di masa depan.</p>
             </div>
 
-            <div class="value-item">
+            <div class="value-item brutal-card">
               <div class="value-icon"><i data-lucide="message-square"></i></div>
               <h4 class="value-title">Komunikasi Transparan</h4>
               <p class="value-desc">Proses kolaborasi yang terbuka. Kami selalu memberikan laporan progres yang detail secara berkala agar Anda mendapatkan hasil sesuai ekspektasi.</p>
@@ -444,8 +481,8 @@
         </div>
       </section>
 
-      <!-- Our Process Section -->
-      <section class="section process-section scroll-reveal">
+      <!-- Our Process Section (Vertical Timeline) -->
+      <section class="section process-section">
         <div class="container">
           <div class="section-header text-center">
             <h2 class="section-subtitle text-gradient">Our Method</h2>
@@ -455,41 +492,52 @@
             </p>
           </div>
 
-          <div class="process-grid">
+          <div class="process-vertical-timeline">
+            <!-- Center track line -->
+            <div class="timeline-track"></div>
+
             <!-- Step 1 -->
-            <div class="process-card scroll-reveal">
-              <div class="process-step-num">1</div>
-              <h4 class="process-card-title">Discovery & Strategy</h4>
-              <p class="process-card-desc">
-                Kami mendengarkan ide Anda, meriset kompetitor, menentukan arsitektur teknis, dan merancang timeline proyek yang presisi.
-              </p>
+            <div class="timeline-item scroll-reveal">
+              <div class="timeline-node">1</div>
+              <div class="timeline-content left-content brutal-card">
+                <h4 class="process-card-title">Discovery & Strategy</h4>
+                <p class="process-card-desc">
+                  Kami mendengarkan ide Anda, meriset kompetitor, menentukan arsitektur teknis, dan merancang timeline proyek yang presisi.
+                </p>
+              </div>
             </div>
 
             <!-- Step 2 -->
-            <div class="process-card scroll-reveal" style="transition-delay: 0.1s;">
-              <div class="process-step-num">2</div>
-              <h4 class="process-card-title">Premium UI/UX Design</h4>
-              <p class="process-card-desc">
-                Merancang prototipe interaktif visual high-fidelity yang modern, ramah seluler, dan menakjubkan bagi target pengguna Anda.
-              </p>
+            <div class="timeline-item item-reverse scroll-reveal" style="transition-delay: 0.1s;">
+              <div class="timeline-node">2</div>
+              <div class="timeline-content right-content brutal-card">
+                <h4 class="process-card-title">Premium UI/UX Design</h4>
+                <p class="process-card-desc">
+                  Merancang prototipe interaktif visual high-fidelity yang modern, ramah seluler, dan menakjubkan bagi target pengguna Anda.
+                </p>
+              </div>
             </div>
 
             <!-- Step 3 -->
-            <div class="process-card scroll-reveal" style="transition-delay: 0.2s;">
-              <div class="process-step-num">3</div>
-              <h4 class="process-card-title">Clean Development</h4>
-              <p class="process-card-desc">
-                Mulai membangun kode bersih yang skalabel, dioptimalkan untuk SEO, responsif, dan berkecepatan tinggi oleh developer ahli.
-              </p>
+            <div class="timeline-item scroll-reveal" style="transition-delay: 0.2s;">
+              <div class="timeline-node">3</div>
+              <div class="timeline-content left-content brutal-card">
+                <h4 class="process-card-title">Clean Development</h4>
+                <p class="process-card-desc">
+                  Mulai membangun kode bersih yang skalabel, dioptimalkan untuk SEO, responsif, dan berkecepatan tinggi oleh developer ahli.
+                </p>
+              </div>
             </div>
 
             <!-- Step 4 -->
-            <div class="process-card scroll-reveal" style="transition-delay: 0.3s;">
-              <div class="process-step-num">4</div>
-              <h4 class="process-card-title">Launch & Support</h4>
-              <p class="process-card-desc">
-                Melakukan deployment di server cloud premium, testing performa menyeluruh, serta pemeliharaan berkala pasca rilis.
-              </p>
+            <div class="timeline-item item-reverse scroll-reveal" style="transition-delay: 0.3s;">
+              <div class="timeline-node">4</div>
+              <div class="timeline-content right-content brutal-card">
+                <h4 class="process-card-title">Launch & Support</h4>
+                <p class="process-card-desc">
+                  Melakukan deployment di server cloud premium, testing performa menyeluruh, serta pemeliharaan berkala pasca rilis.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -508,7 +556,7 @@
 
           <div class="faq-container">
             <!-- FAQ 1 -->
-            <div class="faq-item scroll-reveal">
+            <div class="faq-item brutal-card scroll-reveal">
               <div class="faq-header">
                 <span class="faq-question">Berapa lama proses pembuatan sebuah proyek digital?</span>
                 <div class="faq-icon-box">
@@ -523,7 +571,7 @@
             </div>
 
             <!-- FAQ 2 -->
-            <div class="faq-item scroll-reveal" style="transition-delay: 0.1s;">
+            <div class="faq-item brutal-card scroll-reveal" style="transition-delay: 0.1s;">
               <div class="faq-header">
                 <span class="faq-question">Apakah saya akan mendapatkan update progres secara berkala?</span>
                 <div class="faq-icon-box">
@@ -538,7 +586,7 @@
             </div>
 
             <!-- FAQ 3 -->
-            <div class="faq-item scroll-reveal" style="transition-delay: 0.2s;">
+            <div class="faq-item brutal-card scroll-reveal" style="transition-delay: 0.2s;">
               <div class="faq-header">
                 <span class="faq-question">Bagaimana sistem pembayaran proyek di RIVASA?</span>
                 <div class="faq-icon-box">
@@ -553,7 +601,7 @@
             </div>
 
             <!-- FAQ 4 -->
-            <div class="faq-item scroll-reveal" style="transition-delay: 0.3s;">
+            <div class="faq-item brutal-card scroll-reveal" style="transition-delay: 0.3s;">
               <div class="faq-header">
                 <span class="faq-question">Apakah ada garansi & pemeliharaan (maintenance) setelah rilis?</span>
                 <div class="faq-icon-box">
@@ -570,10 +618,12 @@
         </div>
       </section>
 
-      <!-- Contact Section -->
+      <!-- Contact Section (Unified Brutalist Dashboard) -->
       <section id="contact" class="section contact-section">
-        <div class="container contact-container">
-          <div class="contact-info-panel">
+        <div class="container contact-container brutal-dashboard-wrapper">
+          
+          <!-- Left Branding Card -->
+          <div class="contact-info-panel brutal-card">
             <h3 class="contact-panel-title">Let's build something <br><span class="text-gradient">great together.</span></h3>
             <p class="contact-panel-desc">
               Punya ide luar biasa atau membutuhkan solusi digital untuk bisnis Anda? Silakan hubungi kami. Kami siap berkolaborasi untuk mewujudkannya!
@@ -606,24 +656,25 @@
             </div>
 
             <div class="social-links-grid">
-              <a href="https://www.instagram.com/rivasaproject/" target="_blank" class="social-btn" aria-label="Instagram">
+              <a href="https://www.instagram.com/rivasaproject/" target="_blank" class="social-btn brutal-btn" aria-label="Instagram">
                 <i data-lucide="instagram"></i>
                 <span>@rivasaproject</span>
               </a>
-              <a href="https://wa.me/6281393457688" target="_blank" class="social-btn whatsapp-btn" aria-label="WhatsApp Rizky">
+              <a href="https://wa.me/6281393457688?text=Halo%20Rizky,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20proyek%20digital%20dengan%20RIVASA%20PROJECT." target="_blank" class="social-btn whatsapp-btn brutal-btn" aria-label="WhatsApp Rizky">
                 <i data-lucide="phone"></i>
                 <span>WA Rizky (Director)</span>
               </a>
-              <a href="https://wa.me/6288232850046" target="_blank" class="social-btn whatsapp-btn" aria-label="WhatsApp Revano">
+              <a href="https://wa.me/6288232850046?text=Halo%20Revano,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20desain%20dan%20proyek%20dengan%20RIVASA%20PROJECT." target="_blank" class="social-btn whatsapp-btn brutal-btn" aria-label="WhatsApp Revano">
                 <i data-lucide="phone"></i>
                 <span>WA Revano (CTO)</span>
               </a>
             </div>
           </div>
 
-          <div class="contact-interactive-column" style="display: flex; flex-direction: column; gap: 30px; width: 100%;">
+          <!-- Right Interactive Column (Calculator & Form stacked as Dashboard) -->
+          <div class="contact-interactive-column dashboard-interactive" style="display: flex; flex-direction: column; gap: 30px; width: 100%;">
             <!-- Cost Calculator Panel -->
-            <div class="calculator-panel scroll-reveal">
+            <div class="calculator-panel brutal-card scroll-reveal">
               <div class="calc-title-box">
                 <h4 class="calc-title">Estimasi Biaya Proyek</h4>
                 <p class="calc-subtitle">Pilih opsi kebutuhan Anda untuk melihat kisaran harga</p>
@@ -633,15 +684,15 @@
               <div class="calc-group">
                 <span class="calc-group-title">Jenis Layanan</span>
                 <div class="calc-options-grid" id="calc-service-type">
-                  <div class="calc-option-btn active" data-value="web" data-cost="5000000">
+                  <div class="calc-option-btn active brutal-option" data-value="web" data-cost="5000000">
                     <span class="opt-title">Website</span>
                     <span class="opt-desc">Company Profile / Landing Page</span>
                   </div>
-                  <div class="calc-option-btn" data-value="mobile" data-cost="15000000">
+                  <div class="calc-option-btn brutal-option" data-value="mobile" data-cost="15000000">
                     <span class="opt-title">Mobile App</span>
                     <span class="opt-desc">Android / iOS App</span>
                   </div>
-                  <div class="calc-option-btn" data-value="saas" data-cost="20000000">
+                  <div class="calc-option-btn brutal-option" data-value="saas" data-cost="20000000">
                     <span class="opt-title">Custom SaaS</span>
                     <span class="opt-desc">Sistem Kustom Kompleks</span>
                   </div>
@@ -652,15 +703,15 @@
               <div class="calc-group">
                 <span class="calc-group-title">Skala & Kompleksitas</span>
                 <div class="calc-options-grid" id="calc-scope">
-                  <div class="calc-option-btn active" data-value="simple" data-multiplier="1.0">
+                  <div class="calc-option-btn active brutal-option" data-value="simple" data-multiplier="1.0">
                     <span class="opt-title">Standar</span>
                     <span class="opt-desc">Fitur dasar, performa tinggi</span>
                   </div>
-                  <div class="calc-option-btn" data-value="medium" data-multiplier="1.5">
+                  <div class="calc-option-btn brutal-option" data-value="medium" data-multiplier="1.5">
                     <span class="opt-title">Kustom</span>
                     <span class="opt-desc">Integrasi multi-page & CMS</span>
                   </div>
-                  <div class="calc-option-btn" data-value="enterprise" data-multiplier="2.2">
+                  <div class="calc-option-btn brutal-option" data-value="enterprise" data-multiplier="2.2">
                     <span class="opt-title">Enterprise</span>
                     <span class="opt-desc">Skala besar & multi-role</span>
                   </div>
@@ -671,38 +722,38 @@
               <div class="calc-group">
                 <span class="calc-group-title">Fitur Tambahan (Opsional)</span>
                 <div class="calc-checkbox-list">
-                  <div class="calc-checkbox-item" data-cost="1500000">
+                  <div class="calc-checkbox-item brutal-checkbox" data-cost="1500000">
                     <div class="checkbox-left">
                       <span class="chk-title">User Authentication & Roles</span>
                       <span class="chk-desc">Sistem login, registrasi, & hak akses</span>
                     </div>
-                    <div class="checkbox-custom"></div>
+                    <div class="checkbox-custom brutal-checkbox-box"></div>
                   </div>
-                  <div class="calc-checkbox-item" data-cost="2500000">
+                  <div class="calc-checkbox-item brutal-checkbox" data-cost="2500000">
                     <div class="checkbox-left">
                       <span class="chk-title">Payment Gateway Integration</span>
                       <span class="chk-desc">Midtrans / Xendit (e-wallet, bank transfer)</span>
                     </div>
-                    <div class="checkbox-custom"></div>
+                    <div class="checkbox-custom brutal-checkbox-box"></div>
                   </div>
-                  <div class="calc-checkbox-item" data-cost="1000000">
+                  <div class="calc-checkbox-item brutal-checkbox" data-cost="1000000">
                     <div class="checkbox-left">
                       <span class="chk-title">Advanced SEO & Analytics</span>
                       <span class="chk-desc">Optimasi maksimal di Google & dashboard analitik</span>
                     </div>
-                    <div class="checkbox-custom"></div>
+                    <div class="checkbox-custom brutal-checkbox-box"></div>
                   </div>
                 </div>
               </div>
 
               <!-- Dynamic Calculated Result Box -->
-              <div class="calc-result-box">
+              <div class="calc-result-box brutal-result">
                 <span class="result-label">Estimasi Kisaran Biaya</span>
-                <div class="result-price-range" id="calc-price-display">Rp 5.000.000 - Rp 7.000.000</div>
+                <div class="result-price-range text-gradient" id="calc-price-display">Rp 5.000.000 - Rp 7.000.000</div>
                 <p class="result-desc">
                   *Ini merupakan estimasi awal berdasarkan parameter yang Anda pilih. Dapatkan harga final setelah konsultasi detail.
                 </p>
-                <button type="button" class="btn btn-outline" id="calc-apply-btn" style="width: 100%; margin-top: 10px;">
+                <button type="button" class="btn btn-outline brutal-btn" id="calc-apply-btn" style="width: 100%; margin-top: 10px;">
                   <span>Gunakan Estimasi Ini di Form</span>
                   <i data-lucide="arrow-down"></i>
                 </button>
@@ -710,25 +761,25 @@
             </div>
 
             <!-- Contact Form Card -->
-            <div class="contact-form-panel scroll-reveal">
+            <div class="contact-form-panel brutal-card scroll-reveal" style="transition-delay: 0.1s;">
               <div class="form-bg-glow"></div>
               <form id="contact-form" class="contact-form">
                 <h4 class="form-title">Hubungi Kami</h4>
                 <p class="form-subtitle">Lengkapi detail proyek Anda di bawah ini.</p>
                 
-                <div class="input-group">
+                <div class="input-group brutal-input-group">
                   <input type="text" id="form-name" required placeholder=" " />
                   <label for="form-name">Nama Lengkap</label>
                   <span class="input-border"></span>
                 </div>
 
-                <div class="input-group">
+                <div class="input-group brutal-input-group">
                   <input type="email" id="form-email" required placeholder=" " />
                   <label for="form-email">Alamat Email</label>
                   <span class="input-border"></span>
                 </div>
 
-                <div class="input-group">
+                <div class="input-group brutal-input-group">
                   <select id="form-service" required>
                     <option value="" disabled selected hidden></option>
                     <option value="web">Web Development</option>
@@ -740,13 +791,13 @@
                   <span class="input-border"></span>
                 </div>
 
-                <div class="input-group">
+                <div class="input-group brutal-input-group">
                   <textarea id="form-message" required rows="4" placeholder=" "></textarea>
                   <label for="form-message">Deskripsikan ide proyek Anda...</label>
                   <span class="input-border"></span>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <button type="submit" class="btn btn-primary btn-block brutal-btn" id="form-submit-btn">
                   <span>Kirim Pesan</span>
                   <i data-lucide="send" id="submit-icon"></i>
                 </button>
@@ -760,7 +811,7 @@
                   </div>
                   <h4>Pesan Terkirim!</h4>
                   <p>Terima kasih telah menghubungi RIVASA Project. Tim kami (Rizky / Revano) akan segera menghubungi Anda kembali dalam waktu maksimal 24 jam.</p>
-                  <button type="button" class="btn btn-outline" id="success-close-btn">Kembali</button>
+                  <button type="button" class="btn btn-outline brutal-btn" id="success-close-btn">Kembali</button>
                 </div>
               </div>
             </div>
@@ -875,4 +926,3 @@
     <script type="module" src="main.js"></script>
   </body>
 </html>
-

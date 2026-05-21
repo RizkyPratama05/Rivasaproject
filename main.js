@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
      Portfolio Filter Logic
      ========================================================================== */
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  const portfolioItems = document.querySelectorAll('.portfolio-showcase-item');
 
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -280,7 +280,12 @@ document.addEventListener('DOMContentLoaded', () => {
         this.vx = (Math.random() - 0.5) * 0.6;
         this.vy = (Math.random() - 0.5) * 0.6;
         this.radius = Math.random() * 1.5 + 1;
-        this.color = '#149B9B';
+        const colors = [
+          'rgba(0, 242, 254, 0.45)', // Electric Cyan
+          'rgba(168, 85, 247, 0.45)', // Cyber Violet
+          'rgba(255, 0, 127, 0.45)'   // Neon Pink/Coral
+        ];
+        this.color = colors[Math.floor(Math.random() * colors.length)];
       }
 
       update() {
@@ -309,7 +314,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = this.color;
+        // Make particles have a glowing shadow
+        ctx.shadowBlur = 6;
+        ctx.shadowColor = this.color;
         ctx.fill();
+        // Reset shadow
+        ctx.shadowBlur = 0;
       }
     }
 
@@ -342,7 +352,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(20, 155, 155, ${alpha})`;
+            // Cyan neon connection stroke
+            ctx.strokeStyle = `rgba(0, 242, 254, ${alpha})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -358,7 +369,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(20, 155, 155, ${alpha})`;
+            // Violet neon connection stroke
+            ctx.strokeStyle = `rgba(168, 85, 247, ${alpha})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }

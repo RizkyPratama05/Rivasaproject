@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         
         if (filterValue === 'all' || itemCategory === filterValue) {
-          item.style.display = 'block';
+          item.style.display = 'flex';
           setTimeout(() => {
             item.style.opacity = '1';
             item.style.transform = 'scale(1)';
@@ -568,4 +568,129 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  /* ==========================================================================
+     Interactive Project Details Modal Controller
+     ========================================================================== */
+  const projectCards = document.querySelectorAll('.portfolio-showcase-item');
+  const projectModal = document.getElementById('project-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const modalImg = document.getElementById('modal-project-img');
+  const modalCategory = document.getElementById('modal-project-category');
+  const modalTitle = document.getElementById('modal-project-title');
+  const modalDesc = document.getElementById('modal-project-desc');
+  const modalTagsContainer = document.getElementById('modal-project-tags');
+  const modalArch = document.getElementById('modal-project-arch');
+  const modalCtaBtn = document.getElementById('modal-cta-btn');
+
+  const openProjectModal = (card) => {
+    // Read attributes
+    const title = card.getAttribute('data-title') || '';
+    const category = card.querySelector('.project-category') ? card.querySelector('.project-category').textContent : '';
+    const image = card.getAttribute('data-image') || '';
+    const desc = card.getAttribute('data-desc') || '';
+    const tagsString = card.getAttribute('data-tags') || '';
+    const arch = card.getAttribute('data-arch') || '';
+
+    // Populate modal fields
+    if (modalImg) modalImg.src = image;
+    if (modalCategory) modalCategory.textContent = category;
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalDesc) modalDesc.textContent = desc;
+    if (modalArch) modalArch.textContent = arch;
+
+    // Reset and build tag badges
+    if (modalTagsContainer) {
+      modalTagsContainer.innerHTML = '';
+      if (tagsString) {
+        tagsString.split(',').forEach(tag => {
+          const cleanTag = tag.trim();
+          if (cleanTag) {
+            const span = document.createElement('span');
+            span.className = 'tag-item';
+            span.textContent = cleanTag;
+            modalTagsContainer.appendChild(span);
+          }
+        });
+      }
+    }
+
+    // Configure CTA button behavior
+    if (modalCtaBtn) {
+      modalCtaBtn.onclick = () => {
+        closeProjectModal();
+        
+        // Auto-select option in contact form
+        const formServiceSelect = document.getElementById('form-service');
+        const formMessageTextArea = document.getElementById('form-message');
+        
+        if (formServiceSelect) {
+          const cardCat = card.getAttribute('data-category');
+          formServiceSelect.value = cardCat === 'web' ? 'web' : 'saas';
+          formServiceSelect.dispatchEvent(new Event('change'));
+        }
+
+        if (formMessageTextArea) {
+          formMessageTextArea.value = `Halo RIVASA PROJECT,\n\nSaya tertarik untuk membuat proyek sistem serupa seperti "${title}" yang menggunakan arsitektur ${arch}.\n\nMohon hubungi saya untuk berdiskusi lebih lanjut tentang rancangan dan harga. Terima kasih!`;
+          formMessageTextArea.focus();
+        }
+
+        // Smooth scroll to the contact form section
+        const contactFormPanel = document.querySelector('.contact-form-panel');
+        if (contactFormPanel) {
+          contactFormPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      };
+    }
+
+    // Launch modal
+    if (projectModal) {
+      projectModal.classList.add('active');
+      document.body.classList.add('no-scroll');
+      
+      // Reset scroll positions of visual and text panes
+      const visualPane = document.querySelector('.project-modal-visual-pane');
+      const infoPane = document.querySelector('.project-modal-info-pane');
+      if (visualPane) visualPane.scrollTop = 0;
+      if (infoPane) infoPane.scrollTop = 0;
+    }
+  };
+
+  const closeProjectModal = () => {
+    if (projectModal) {
+      projectModal.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    }
+  };
+
+  // Add click listeners to all project cards
+  projectCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      openProjectModal(card);
+    });
+  });
+
+  // Close modal button trigger
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeProjectModal();
+    });
+  }
+
+  // Close modal by clicking backdrop
+  if (projectModal) {
+    projectModal.addEventListener('click', (e) => {
+      if (e.target === projectModal) {
+        closeProjectModal();
+      }
+    });
+  }
+
+  // Keyboard accessibility: Escape key closes modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && projectModal && projectModal.classList.contains('active')) {
+      closeProjectModal();
+    }
+  });
 });

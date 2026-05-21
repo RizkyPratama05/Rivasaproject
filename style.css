@@ -120,6 +120,34 @@ body {
   pointer-events: none;
 }
 
+/* --- Global Icon & SVG Styling --- */
+svg.lucide, i[data-lucide] {
+  display: inline-block;
+  stroke-width: 2px;
+  width: 24px;
+  height: 24px;
+}
+
+.service-icon-box svg, .service-icon-box i {
+  width: 24px;
+  height: 24px;
+}
+
+.value-icon svg, .value-icon i {
+  width: 20px;
+  height: 20px;
+}
+
+.founder-social a svg, .founder-social a i {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn svg, .social-btn i {
+  width: 18px;
+  height: 18px;
+}
+
 /* --- Typography Helpers --- */
 .text-gradient {
   background: linear-gradient(135deg, #ffffff 0%, var(--brand-teal) 50%, var(--brand-mint) 100%);

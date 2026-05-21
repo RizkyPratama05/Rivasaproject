@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- SEO Meta Tags -->
+    <title>RIVASA PROJECT - Digital Solutions for Modern Business</title>
+    <meta name="description" content="RIVASA PROJECT adalah software house & digital agency yang menyediakan solusi teknologi premium seperti Web Development, Mobile Apps, Custom SaaS, dan UI/UX Design. Tech, Code, Build." />
+    <meta name="keywords" content="RIVASA, RIVASA Project, Software House Indonesia, Web Development, Mobile Apps, Pembuatan Website, Rizky Pratama Putra, Revano Athalla Kartika" />
+    <meta name="author" content="RIVASA PROJECT" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RIVASA PROJECT - Digital Solutions for Modern Business" />
+    <meta property="og:description" content="Premium software development & digital agency based in Indonesia. Tech | Code | Build." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    
+    <!-- Ambient Background Elements -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-grid"></div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#home" class="logo" id="nav-logo" aria-label="RIVASA PROJECT Home">
+          <span class="logo-text">RIV<span class="logo-a">A<span class="logo-arrow">▲</span></span>SA</span>
+          <span class="logo-sub">PROJECT</span>
+        </a>
+        
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="nav-link nav-btn-mobile">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-outline nav-btn-desktop">Contact Us</a>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      
+      <!-- Hero Section -->
+      <section id="home" class="section hero-section">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="badge-glow">
+              <span class="badge-dot"></span>
+              <span>Based in Indonesia</span>
+            </div>
+            <h1 class="hero-title">
+              Digital Solutions for <br>
+              <span class="text-gradient">Modern Business</span>
+            </h1>
+            <p class="hero-desc">
+              <strong>Tech. Code. Build.</strong> Kami merancang dan membangun ekosistem digital premium mulai dari website performa tinggi, aplikasi mobile tangguh, hingga sistem SaaS kustom untuk mengakselerasi pertumbuhan bisnis Anda.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">
+                <span>Start a Project</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#services" class="btn btn-secondary">
+                <span>Explore Services</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-visual">
+            <div class="hero-card-glow"></div>
+            <div class="interactive-card">
+              <div class="card-header">
+                <div class="window-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="window-title">rivasa-project.config.js</span>
+              </div>
+              <div class="card-body code-editor">
+                <pre><code><span class="token keyword">const</span> <span class="token variable">rivasaProject</span> <span class="token operator">=</span> {
+  owners: [
+    <span class="token string">"Rizky Pratama Putra"</span>,
+    <span class="token string">"Revano Athalla Kartika"</span>
+  ],
+  services: [
+    <span class="token string">"Web Development"</span>,
+    <span class="token string">"Mobile Apps"</span>,
+    <span class="token string">"Custom Systems"</span>
+  ],
+  mission: <span class="token string">"Build high-performance tech"</span>,
+  readyForNewProjects: <span class="token boolean">true</span>
+};
+
+<span class="token keyword">export default</span> <span class="token variable">rivasaProject</span>;</code></pre>
+              </div>
+            </div>
+            
+            <div class="floating-badge badge-1">
+              <i data-lucide="cpu" class="badge-icon"></i>
+              <div class="badge-text">
+                <span class="badge-title">High Perf</span>
+                <span class="badge-desc">Fast Loading</span>
+              </div>
+            </div>
+            
+            <div class="floating-badge badge-2">
+              <i data-lucide="code" class="badge-icon"></i>
+              <div class="badge-text">
+                <span class="badge-title">Clean Code</span>
+                <span class="badge-desc">Scalable</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section about-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-subtitle text-gradient">Who We Are</h2>
+            <h3 class="section-title">Di Balik Layar RIVASA Project</h3>
+            <p class="section-desc mx-auto">
+              RIVASA Project didirikan oleh sinergi dua talenta profesional di bidang teknologi dan desain untuk menghadirkan solusi digital yang tidak hanya berfungsi secara sempurna, tetapi juga menakjubkan secara visual.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <!-- Founder 1 -->
+            <div class="founder-card">
+              <div class="founder-bg-glow"></div>
+              <div class="founder-card-inner">
+                <div class="founder-header">
+                  <div class="avatar-placeholder">
+                    <img src="rizky.jpg" alt="Rizky Pratama Putra">
+                  </div>
+                  <div>
+                    <h4 class="founder-name">Rizky Pratama Putra</h4>
+                    <span class="founder-role">Co-Founder & Managing Director</span>
+                  </div>
+                </div>
+                <p class="founder-desc">
+                  Memimpin arah strategis agensi serta arsitektur sistem backend. Rizky berfokus pada performa sistem, keamanan data, keandalan server, dan memastikan bahwa setiap baris kode dibangun dengan efisiensi tinggi serta siap untuk skala bisnis yang besar.
+                </p>
+                <div class="founder-skills">
+                  <span class="skill-tag">Backend Dev</span>
+                  <span class="skill-tag">System Architecture</span>
+                  <span class="skill-tag">DevOps</span>
+                  <span class="skill-tag">Project Strategy</span>
+                </div>
+                <div class="founder-social">
+                  <a href="https://wa.me/6281393457688" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                  <a href="https://www.instagram.com/rivasaproject/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                  <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Founder 2 -->
+            <div class="founder-card">
+              <div class="founder-bg-glow"></div>
+              <div class="founder-card-inner">
+                <div class="founder-header">
+                  <div class="avatar-placeholder">
+                    <img src="revano.jpg" alt="Revano Athalla Kartika">
+                  </div>
+                  <div>
+                    <h4 class="founder-name">Revano Athalla Kartika</h4>
+                    <span class="founder-role">Co-Founder & CTO / Creative Lead</span>
+                  </div>
+                </div>
+                <p class="founder-desc">
+                  Mengawasi kualitas estetika desain interaktif serta implementasi frontend yang responsif. Revano memiliki hasrat mendalam untuk menciptakan antarmuka modern yang ramah pengguna (UI/UX) dan animasi mikro yang halus guna memberikan pengalaman terbaik.
+                </p>
+                <div class="founder-skills">
+                  <span class="skill-tag">UI/UX Design</span>
+                  <span class="skill-tag">Frontend Dev</span>
+                  <span class="skill-tag">React / Vue</span>
+                  <span class="skill-tag">Creative Direction</span>
+                </div>
+                <div class="founder-social">
+                  <a href="https://wa.me/6288232850046" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                  <a href="https://www.instagram.com/rivasaproject/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                  <a href="#" aria-label="Figma"><i data-lucide="figma"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="section services-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-subtitle text-gradient">Our Services</h2>
+            <h3 class="section-title">Solusi Digital yang Kami Tawarkan</h3>
+            <p class="section-desc mx-auto">
+              Kami tidak sekadar membuat program, kami merancang fondasi digital masa depan bisnis Anda dengan standar teknologi industri terkini.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            
+            <!-- Service 1 -->
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i data-lucide="globe"></i>
+              </div>
+              <h4 class="service-title">Web Development</h4>
+              <p class="service-desc">
+                Website interaktif berkecepatan tinggi, dioptimalkan untuk SEO, ramah seluler, dan ramah pengguna menggunakan framework modern seperti Next.js, Vite, dan React.
+              </p>
+              <ul class="service-features">
+                <li><i data-lucide="check" class="check-icon"></i> Landing Pages</li>
+                <li><i data-lucide="check" class="check-icon"></i> Website Company Profile</li>
+                <li><i data-lucide="check" class="check-icon"></i> Portal E-Commerce</li>
+              </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i data-lucide="smartphone"></i>
+              </div>
+              <h4 class="service-title">Mobile App Development</h4>
+              <p class="service-desc">
+                Aplikasi mobile lintas platform (iOS & Android) yang mulus dengan performa mumpuni dan integrasi backend tanpa kendala.
+              </p>
+              <ul class="service-features">
+                <li><i data-lucide="check" class="check-icon"></i> Native-like Experience</li>
+                <li><i data-lucide="check" class="check-icon"></i> Flutter & React Native</li>
+                <li><i data-lucide="check" class="check-icon"></i> Push Notifications & APIs</li>
+              </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i data-lucide="layers"></i>
+              </div>
+              <h4 class="service-title">Custom Software & SaaS</h4>
+              <p class="service-desc">
+                Sistem internal kustom untuk mengotomatiskan alur kerja Anda, sistem CRM/ERP terintegrasi, dan arsitektur SaaS yang sangat skalabel.
+              </p>
+              <ul class="service-features">
+                <li><i data-lucide="check" class="check-icon"></i> Dashboard Analytics</li>
+                <li><i data-lucide="check" class="check-icon"></i> Otomatisasi Proses Bisnis</li>
+                <li><i data-lucide="check" class="check-icon"></i> Skalabilitas Sistem Cloud</li>
+              </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i data-lucide="paint-brush"></i>
+              </div>
+              <h4 class="service-title">UI/UX & Branding</h4>
+              <p class="service-desc">
+                Riset pengguna mendalam dan prototipe interaktif yang memukau secara visual, fungsional, serta memperkuat identitas brand bisnis Anda.
+              </p>
+              <ul class="service-features">
+                <li><i data-lucide="check" class="check-icon"></i> Riset Pengguna & Wireframing</li>
+                <li><i data-lucide="check" class="check-icon"></i> Desain Visual High-Fidelity</li>
+                <li><i data-lucide="check" class="check-icon"></i> Panduan Identitas Brand</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-subtitle text-gradient">Our Works</h2>
+            <h3 class="section-title">Portofolio & Eksplorasi Kreatif</h3>
+            <p class="section-desc mx-auto">
+              Intip sekilas karya-karya terbaik dan bukti komitmen kami dalam menghadirkan solusi digital dengan kualitas dan standar performa tertinggi.
+            </p>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Websites</button>
+            <button class="filter-btn" data-filter="saas">SaaS & Systems</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          </div>
+
+          <!-- Portfolio Grid -->
+          <div class="portfolio-grid" id="portfolio-grid">
+            
+            <!-- Project 1 -->
+            <div class="portfolio-item" data-category="saas">
+              <div class="portfolio-img-box">
+                <div class="portfolio-img-placeholder dark-gradient">
+                  <div class="project-art">
+                    <div class="art-card">
+                      <div class="art-header">
+                        <span class="art-dot"></span>
+                        <span class="art-dot"></span>
+                        <span class="art-dot"></span>
+                      </div>
+                      <div class="art-chart">
+                        <div class="chart-bar" style="height: 40%"></div>
+                        <div class="chart-bar" style="height: 70%"></div>
+                        <div class="chart-bar" style="height: 55%"></div>
+                        <div class="chart-bar" style="height: 85%"></div>
+                        <div class="chart-bar" style="height: 90%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-hover">
+                  <a href="#contact" class="portfolio-link-icon" aria-label="Lihat Proyek"><i data-lucide="external-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="project-category">SaaS & Systems</span>
+                <h4 class="project-title">Aura Analytics Dashboard</h4>
+                <p class="project-desc">Dashboard pemantauan analitik data real-time dengan sistem visualisasi grafik dinamis dan responsif.</p>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio-item" data-category="web">
+              <div class="portfolio-img-box">
+                <div class="portfolio-img-placeholder light-gradient">
+                  <div class="project-art">
+                    <div class="art-browser">
+                      <div class="art-header">
+                        <span class="art-dot"></span>
+                        <span class="art-dot"></span>
+                      </div>
+                      <div class="art-hero-mock">
+                        <div class="mock-line-title"></div>
+                        <div class="mock-btn-glow"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-hover">
+                  <a href="#contact" class="portfolio-link-icon" aria-label="Lihat Proyek"><i data-lucide="external-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="project-category">Websites</span>
+                <h4 class="project-title">Apex E-Commerce Platform</h4>
+                <p class="project-desc">Website e-commerce tangguh dengan proses checkout super cepat, terintegrasi payment gateway lokal.</p>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="portfolio-item" data-category="mobile">
+              <div class="portfolio-img-box">
+                <div class="portfolio-img-placeholder mint-gradient">
+                  <div class="project-art">
+                    <div class="art-phone">
+                      <div class="art-screen">
+                        <div class="screen-circle"></div>
+                        <div class="screen-line"></div>
+                        <div class="screen-line short"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-hover">
+                  <a href="#contact" class="portfolio-link-icon" aria-label="Lihat Proyek"><i data-lucide="external-link"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <span class="project-category">Mobile Apps</span>
+                <h4 class="project-title">Zenith Productivity Mobile App</h4>
+                <p class="project-desc">Aplikasi pelacak rutinitas harian & manajemen proyek minimalis yang dirilis di Google Play Store & App Store.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Us Section -->
+      <section class="section values-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-subtitle text-gradient">Why Choose Us</h2>
+            <h3 class="section-title">Nilai Utama RIVASA Project</h3>
+            <p class="section-desc mx-auto">
+              Berikut adalah nilai-nilai inti dan alasan mengapa klien mempercayakan proyek-proyek penting digital mereka kepada kami.
+            </p>
+          </div>
+
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-icon"><i data-lucide="zap"></i></div>
+              <h4 class="value-title">Performa & Kecepatan Maksimal</h4>
+              <p class="value-desc">Kami peduli dengan skor kecepatan loading website dan performa responsivitas aplikasi guna memberikan kenyamanan maksimal bagi pengguna akhir.</p>
+            </div>
+
+            <div class="value-item">
+              <div class="value-icon"><i data-lucide="shield-check"></i></div>
+              <h4 class="value-title">Kode Bersih & Skalabel</h4>
+              <p class="value-desc">Mengikuti standar best practice penulisan kode modern agar mudah dimodifikasi, aman, dan siap menyokong perluasan fitur bisnis di masa depan.</p>
+            </div>
+
+            <div class="value-item">
+              <div class="value-icon"><i data-lucide="message-square"></i></div>
+              <h4 class="value-title">Komunikasi Transparan</h4>
+              <p class="value-desc">Proses kolaborasi yang terbuka. Kami selalu memberikan laporan progres yang detail secara berkala agar Anda mendapatkan hasil sesuai ekspektasi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section contact-section">
+        <div class="container contact-container">
+          <div class="contact-info-panel">
+            <h3 class="contact-panel-title">Let's build something <br><span class="text-gradient">great together.</span></h3>
+            <p class="contact-panel-desc">
+              Punya ide luar biasa atau membutuhkan solusi digital untuk bisnis Anda? Silakan hubungi kami. Kami siap berkolaborasi untuk mewujudkannya!
+            </p>
+            
+            <div class="contact-details">
+              <div class="detail-item">
+                <i data-lucide="map-pin"></i>
+                <div>
+                  <h5>Location</h5>
+                  <p>Based in Indonesia</p>
+                </div>
+              </div>
+              
+              <div class="detail-item">
+                <i data-lucide="mail"></i>
+                <div>
+                  <h5>Email</h5>
+                  <p>rivasaproject@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <i data-lucide="message-circle"></i>
+                <div>
+                  <h5>Direct DM</h5>
+                  <p>DM kami di Instagram untuk respon cepat.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links-grid">
+              <a href="https://www.instagram.com/rivasaproject/" target="_blank" class="social-btn" aria-label="Instagram">
+                <i data-lucide="instagram"></i>
+                <span>@rivasaproject</span>
+              </a>
+              <a href="https://wa.me/6281393457688" target="_blank" class="social-btn whatsapp-btn" aria-label="WhatsApp Rizky">
+                <i data-lucide="phone"></i>
+                <span>WA Rizky (Director)</span>
+              </a>
+              <a href="https://wa.me/6288232850046" target="_blank" class="social-btn whatsapp-btn" aria-label="WhatsApp Revano">
+                <i data-lucide="phone"></i>
+                <span>WA Revano (CTO)</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <div class="form-bg-glow"></div>
+            <form id="contact-form" class="contact-form">
+              <h4 class="form-title">Hubungi Kami</h4>
+              <p class="form-subtitle">Lengkapi detail proyek Anda di bawah ini.</p>
+              
+              <div class="input-group">
+                <input type="text" id="form-name" required placeholder=" " />
+                <label for="form-name">Nama Lengkap</label>
+                <span class="input-border"></span>
+              </div>
+
+              <div class="input-group">
+                <input type="email" id="form-email" required placeholder=" " />
+                <label for="form-email">Alamat Email</label>
+                <span class="input-border"></span>
+              </div>
+
+              <div class="input-group">
+                <select id="form-service" required>
+                  <option value="" disabled selected hidden></option>
+                  <option value="web">Web Development</option>
+                  <option value="mobile">Mobile App Development</option>
+                  <option value="saas">Custom Software & SaaS</option>
+                  <option value="other">Lainnya / Kolaborasi</option>
+                </select>
+                <label for="form-service" class="select-label">Kategori Layanan</label>
+                <span class="input-border"></span>
+              </div>
+
+              <div class="input-group">
+                <textarea id="form-message" required rows="4" placeholder=" "></textarea>
+                <label for="form-message">Deskripsikan ide proyek Anda...</label>
+                <span class="input-border"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Kirim Pesan</span>
+                <i data-lucide="send" id="submit-icon"></i>
+              </button>
+            </form>
+            
+            <!-- Success Overlay inside Card -->
+            <div class="success-overlay" id="success-overlay">
+              <div class="success-content">
+                <div class="success-icon-box">
+                  <i data-lucide="check-circle-2"></i>
+                </div>
+                <h4>Pesan Terkirim!</h4>
+                <p>Terima kasih telah menghubungi RIVASA Project. Tim kami (Rizky / Revano) akan segera menghubungi Anda kembali dalam waktu maksimal 24 jam.</p>
+                <button type="button" class="btn btn-outline" id="success-close-btn">Kembali</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-text">RIV<span class="logo-a">A<span class="logo-arrow">▲</span></span>SA</span>
+            <span class="logo-sub">PROJECT</span>
+          </a>
+          <p class="footer-desc">
+            Digital Solutions for Modern Business. Menghubungkan ide hebat dengan keahlian teknologi kelas dunia.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-column">
+            <h5 class="column-title">Navigasi</h5>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5 class="column-title">Kontak</h5>
+            <ul class="footer-links">
+              <li>rivasaproject@gmail.com</li>
+              <li>Based in Indonesia</li>
+              <li><a href="https://www.instagram.com/rivasaproject/" target="_blank">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-container">
+          <p class="copyright">
+            &copy; 2026 RIVASA PROJECT. All rights reserved.
+          </p>
+          <p class="credits">
+            Founded by <strong>Rizky Pratama Putra</strong> & <strong>Revano Athalla Kartika</strong>.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main Module Script -->
+    <script src="main.js"></script>
+  </body>
+</html>

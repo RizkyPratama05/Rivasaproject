@@ -443,11 +443,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const calcPriceDisplay = document.getElementById('calc-price-display');
   const calcApplyBtn = document.getElementById('calc-apply-btn');
 
-  let selectedServiceCost = 5000000; // Default: Website
+  let selectedServiceCost = 1000000; // Default: Website
   let selectedServiceValue = 'web';
-  let selectedServiceTitle = 'Website (Company Profile)';
+  let selectedServiceTitle = 'Website';
   let selectedScopeMultiplier = 1.0; // Default: Standar
-  let selectedScopeTitle = 'Standar';
+  let selectedScopeTitle = 'Simple';
   let additionalCosts = 0;
   let selectedFeatures = [];
 
@@ -523,7 +523,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const featuresText = selectedFeatures.length > 0 ? selectedFeatures.join(', ') : 'Tidak ada';
         const priceRange = calcPriceDisplay.textContent;
 
-        formMessageTextArea.value = `Halo RIVASA PROJECT,\n\nSaya tertarik untuk mendiskusikan proyek digital dengan spesifikasi berikut:\n- Layanan: ${selectedServiceTitle}\n- Skala/Kompleksitas: ${selectedScopeTitle}\n- Fitur Tambahan: ${featuresText}\n- Estimasi Awal: ${priceRange}\n\nMohon hubungi saya untuk diskusi lebih lanjut. Terima kasih!`;
+        formMessageTextArea.value = `Halo Rizky & Revano,\n\nSaya pengen ngobrolin tentang rencana proyek digital dengan spesifikasi berikut:\n- Layanan: ${selectedServiceTitle}\n- Skala/Kompleksitas: ${selectedScopeTitle}\n- Fitur Tambahan: ${featuresText}\n- Estimasi Kisaran Biaya: ${priceRange}\n\nYuk hubungi saya buat ngobrol santai lebih lanjut!`;
         
         // Shift focus to textarea and adjust scroll
         formMessageTextArea.focus();
@@ -593,7 +593,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const arch = card.getAttribute('data-arch') || '';
 
     // Populate modal fields
-    if (modalImg) modalImg.src = image;
+    const visualPane = document.querySelector('.project-modal-visual-pane');
+    if (visualPane) {
+      visualPane.innerHTML = ''; // clear previous images
+      if (image) {
+        const isMobile = card.getAttribute('data-category') === 'mobile';
+        image.split(',').forEach(imgSrc => {
+          const cleanSrc = imgSrc.trim();
+          if (cleanSrc) {
+            const img = document.createElement('img');
+            img.src = cleanSrc;
+            img.alt = 'Project Screenshot';
+            img.className = 'modal-screenshot-img';
+            img.style.marginBottom = '20px';
+            img.style.width = '100%';
+            if (isMobile) {
+              img.style.maxWidth = '340px';
+            } else {
+              img.style.maxWidth = '100%';
+            }
+            img.style.height = 'auto';
+            img.style.objectFit = 'contain';
+            visualPane.appendChild(img);
+          }
+        });
+        if (visualPane.lastChild) visualPane.lastChild.style.marginBottom = '0';
+      }
+    }
     if (modalCategory) modalCategory.textContent = category;
     if (modalTitle) modalTitle.textContent = title;
     if (modalDesc) modalDesc.textContent = desc;
@@ -626,12 +652,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (formServiceSelect) {
           const cardCat = card.getAttribute('data-category');
-          formServiceSelect.value = cardCat === 'web' ? 'web' : 'saas';
+          if (cardCat === 'web') {
+            formServiceSelect.value = 'web';
+          } else if (cardCat === 'mobile') {
+            formServiceSelect.value = 'mobile';
+          } else {
+            formServiceSelect.value = 'saas';
+          }
           formServiceSelect.dispatchEvent(new Event('change'));
         }
 
         if (formMessageTextArea) {
-          formMessageTextArea.value = `Halo RIVASA PROJECT,\n\nSaya tertarik untuk membuat proyek sistem serupa seperti "${title}" yang menggunakan arsitektur ${arch}.\n\nMohon hubungi saya untuk berdiskusi lebih lanjut tentang rancangan dan harga. Terima kasih!`;
+          formMessageTextArea.value = `Halo Rizky & Revano,\n\nSaya tertarik nih buat nanya-nanya atau bikin proyek seperti "${title}" yang pakai ${arch}.\n\nBisa tolong hubungi saya buat ngobrol santai lebih lanjut? Terima kasih banyak!`;
           formMessageTextArea.focus();
         }
 

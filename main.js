@@ -1,8 +1,8 @@
+import { createIcons, icons } from 'lucide';
+
 // Robust Lucide Initializer (resolves deferred module timing issues)
 const initLucide = () => {
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
+  createIcons({ icons });
 };
 
 // Run immediately as deferred modules execute when DOM is parsed
@@ -549,9 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       waWidget.classList.toggle('active');
       // Re-trigger Lucide icons to ensure any dynamically injected icon formats load perfectly
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
+      initLucide();
     });
 
     // Close drawer when clicking outside

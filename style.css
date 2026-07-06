@@ -767,15 +767,7 @@ svg.lucide, i[data-lucide] {
   border-right: 2px solid var(--neon-coral);
 }
 
-.fanesha-polaroid {
-  transform: rotate(-0.5deg);
-  border-left: 2px solid var(--neon-purple);
-}
 
-.masayu-polaroid {
-  transform: rotate(0.8deg);
-  border-right: 2px solid var(--neon-yellow);
-}
 
 .brutal-polaroid:hover {
   transform: rotate(0deg) translateY(-6px);
@@ -791,13 +783,7 @@ svg.lucide, i[data-lucide] {
   border-color: var(--neon-coral);
 }
 
-.fanesha-polaroid:hover {
-  border-color: var(--neon-purple);
-}
 
-.masayu-polaroid:hover {
-  border-color: var(--neon-yellow);
-}
 
 .polaroid-photo-wrapper {
   position: relative;
@@ -845,15 +831,7 @@ svg.lucide, i[data-lucide] {
   border-color: var(--neon-coral);
 }
 
-.polaroid-tag-purple {
-  background: rgba(139, 92, 246, 0.85);
-  border-color: var(--neon-purple);
-}
 
-.polaroid-tag-yellow {
-  background: rgba(202, 138, 4, 0.85);
-  border-color: var(--neon-yellow);
-}
 
 .polaroid-content {
   padding-top: 0; /* Align with top of photo */
@@ -893,17 +871,7 @@ svg.lucide, i[data-lucide] {
   color: var(--neon-coral);
 }
 
-.role-purple {
-  background: rgba(139, 92, 246, 0.1);
-  border-color: rgba(139, 92, 246, 0.3);
-  color: var(--neon-purple);
-}
 
-.role-yellow {
-  background: rgba(202, 138, 4, 0.1);
-  border-color: rgba(202, 138, 4, 0.3);
-  color: var(--neon-yellow);
-}
 
 .founder-desc {
   font-size: 15px;
@@ -983,19 +951,7 @@ svg.lucide, i[data-lucide] {
   box-shadow: 0 0 10px rgba(255, 0, 127, 0.15);
 }
 
-.fanesha-polaroid .founder-social a:hover {
-  background: rgba(139, 92, 246, 0.1);
-  color: var(--neon-purple);
-  border-color: var(--neon-purple);
-  box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
-}
 
-.masayu-polaroid .founder-social a:hover {
-  background: rgba(202, 138, 4, 0.1);
-  color: var(--neon-yellow);
-  border-color: var(--neon-yellow);
-  box-shadow: 0 0 10px rgba(202, 138, 4, 0.15);
-}
 
 /* Instagram Handle Badge Pill */
 .instagram-handle-badge {
@@ -1033,17 +989,7 @@ svg.lucide, i[data-lucide] {
   color: var(--neon-coral);
 }
 
-.fanesha-polaroid .instagram-handle-badge:hover {
-  background: rgba(139, 92, 246, 0.08);
-  border-color: rgba(139, 92, 246, 0.3);
-  color: var(--neon-purple);
-}
 
-.masayu-polaroid .instagram-handle-badge:hover {
-  background: rgba(202, 138, 4, 0.08);
-  border-color: rgba(202, 138, 4, 0.3);
-  color: var(--neon-yellow);
-}
 
 /* ==========================================================================
    Services Section - Bento Grid Layout (Glassmorphic)
